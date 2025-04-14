@@ -1,0 +1,19 @@
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.2s ease-out forwards;
+}
+
+/* Prevent text selection when clicking menu */
+.menu-container {
+  user-select: none;
+}

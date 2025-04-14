@@ -1,0 +1,60 @@
+<section id="home" class="min-h-screen relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-8 pt-24 pb-32 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Left Content -->
+      <div class="space-y-8">
+        <h1 class="text-6xl font-bold leading-tight">
+          Rethinking<br />
+          Children's Future<br />
+          With Education
+        </h1>
+        <p class="text-xl text-gray-600 max-w-lg">
+          Empowering African children through education and sustainable
+          development initiatives.
+        </p>
+        <div class="flex gap-4">
+          <a
+            href="#overview"
+            class="bg-[#b20012] text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors"
+          >
+            Learn More
+          </a>
+          <a
+            href="#projects"
+            class="border border-[#b20012] text-[#b20012] px-6 py-3 rounded-lg hover:bg-[#b20012] hover:text-white transition-colors"
+          >
+            Our Projects
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="relative">
+        <div class="aspect-[4/3] rounded-2xl overflow-hidden">
+          <img
+            src="/assets/photo-1.jpg"
+            alt="African children learning"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <!-- Decorative Elements -->
+        <div
+          class="absolute -top-4 -right-4 w-24 h-24 bg-[#b20012] opacity-20 rounded-full"
+        ></div>
+        <div
+          class="absolute -bottom-4 -left-4 w-32 h-32 bg-[#b20012] opacity-20 rounded-full"
+        ></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Pattern -->
+  <div
+    class="absolute top-0 right-0 w-1/2 h-full bg-gray-50 -skew-x-12 transform origin-top"
+  ></div>
+</section>
+
+<div>
+  <app-overview></app-overview>
+  <app-projects></app-projects>
+</div>

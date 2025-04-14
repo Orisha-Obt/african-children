@@ -1,0 +1,72 @@
+<div class="fixed bottom-6 left-1/2 z-50 transform -translate-x-1/2">
+  <div
+    class="menu-container relative inline-flex rounded-xl shadow-lg bg-white p-1"
+  >
+    <!-- Menu Button -->
+    <button
+      (click)="toggleMenu($event)"
+      class="bg-white px-4 py-2 text-gray-600 flex items-center"
+    >
+      <span>Menu</span>
+
+      <!-- Arrow icon -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5 transform transition-transform ml-2"
+        [class.rotate-180]="isOpen()"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M5.23 7.21a.75.75 0 011.06.02L10 11.084l3.71-3.854a.75.75 0 111.08 1.04l-4.25 4.417a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </button>
+
+    <!-- Active Section Button -->
+    <button
+      class="bg-[#b20012] text-white px-4 py-2 flex items-center rounded-2xl"
+    >
+      <span>{{ activeSection() }}</span>
+    </button>
+
+    <!-- Drop-Up Menu -->
+    <div
+      *ngIf="isOpen()"
+      class="absolute bottom-full mb-2 left-0 bg-white rounded-lg shadow-lg w-48 py-2 space-y-1 animate-slide-up border border-gray-200"
+    >
+      <a
+        routerLink="/"
+        fragment="home"
+        (click)="scrollToSection('home')"
+        class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+      >
+        Home
+      </a>
+      <a
+        routerLink="/"
+        fragment="overview"
+        (click)="scrollToSection('overview')"
+        class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+      >
+        Overview
+      </a>
+      <a
+        routerLink="/"
+        fragment="projects"
+        (click)="scrollToSection('projects')"
+        class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+      >
+        Projects
+      </a>
+      <a
+        routerLink="/about"
+        class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+      >
+        About
+      </a>
+    </div>
+  </div>
+</div>
